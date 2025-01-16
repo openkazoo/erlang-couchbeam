@@ -71,7 +71,7 @@ kz_application() ->
     end.
 
 get_kz_log_id() ->
-    case kz_log:get_callid() of
+    case kz_util:get_callid() of
         <<"00000000000">> -> undefined;
         Other -> Other
     end.
