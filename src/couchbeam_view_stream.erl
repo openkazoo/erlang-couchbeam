@@ -68,7 +68,7 @@ init_stream(Parent, Owner, StreamRef, {_Db, _Url, _Args}=Req,
 
     _ = case proplists:get_value(kz_log_id, StreamOptions, undefined) of
             undefined -> ok;
-            LogId -> kz_log:put_callid(LogId)
+            LogId -> kz_util:put_callid(LogId)
         end,
 
     Async = proplists:get_value(async, StreamOptions, normal),
