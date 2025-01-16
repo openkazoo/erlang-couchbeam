@@ -244,7 +244,7 @@ view_options_fold(Fun, Acc) ->
     end.
 
 kz_log_id() ->
-    case kz_log:get_callid() of
+    case kz_util:get_callid() of
         <<"00000000000">> -> undefined;
         LogId -> {kz_log_id, LogId}
     end.
